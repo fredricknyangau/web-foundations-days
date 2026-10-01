@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f3f5f1;
+    color: #26352f;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    padding: 2rem 1rem 1.5rem;
+    background: #24483b;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.25rem;
+}
+
+header p {
+    margin: 0.25rem 0 1rem;
+    color: #d7e5dc;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: #d7e5dc;
+    color: #24483b;
+}
+
+main {
+    width: calc(100% - 2rem);
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+main > section {
+    margin: 1.25rem 0;
+    padding: 1.5rem;
+    border: 1px solid #e0e6df;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgb(38 53 47 / 6%);
+}
+
+main > h2 {
+    margin-bottom: 0.25rem;
+}
+
+main > h2 + p {
+    margin-top: 0;
+}
+
+h2,
+h3 {
+    color: #24483b;
+    line-height: 1.25;
+}
+
+main > section h2,
+main > section h3 {
+    margin-top: 0;
+}
+
+ul.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.features li {
+    padding: 1rem;
+    border-left: 3px solid #6b9b7c;
+    border-radius: 4px;
+    background: #f3f5f1;
+}
+
+#notes-list {
+    padding-left: 1.25rem;
+}
+
+form p {
+    margin: 0 0 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #bbc8bd;
+    border-radius: 4px;
+    background: #fff;
+    color: inherit;
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #397458;
+    outline: 2px solid rgb(57 116 88 / 20%);
+}
+
+textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+button {
+    padding: 0.65rem 1rem;
+    border: 0;
+    border-radius: 4px;
+    background: #397458;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+button:hover,
+button:focus-visible {
+    background: #24483b;
+    transform: translateY(-1px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 0.7rem;
+    border: 1px solid #e0e6df;
+}
+
+th {
+    background: #f3f5f1;
+    color: #24483b;
+}
+
+footer {
+    padding: 1rem;
+    color: #52645a;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1.25rem 0.75rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    main {
+        width: calc(100% - 1.25rem);
+        margin: 1.25rem auto;
+    }
+
+    main > section {
+        padding: 1rem;
+    }
+}
