@@ -1,0 +1,114 @@
+:root {
+    color-scheme: light;
+    --background: #f3f4f6;
+    --surface: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #d1d5db;
+    --button: #2563eb;
+    --button-text: #ffffff;
+    --warning: #c2410c;
+    --over: #b91c1c;
+}
+
+body.dark {
+    color-scheme: dark;
+    --background: #111827;
+    --surface: #1f2937;
+    --text: #f9fafb;
+    --muted: #d1d5db;
+    --border: #4b5563;
+    --button: #3b82f6;
+    --button-text: #ffffff;
+    --warning: #fb923c;
+    --over: #f87171;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem 1rem;
+    background: var(--background);
+    color: var(--text);
+    font-family: system-ui, sans-serif;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.notes-app {
+    width: min(100%, 40rem);
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    background: var(--surface);
+}
+
+h1 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 12rem;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.375rem;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    resize: vertical;
+}
+
+.counts {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--muted);
+}
+
+.counts p {
+    margin: 0.75rem 0;
+}
+
+#char-count.warning {
+    color: var(--warning);
+}
+
+#char-count.over {
+    color: var(--over);
+    font-weight: 700;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+button {
+    padding: 0.625rem 1rem;
+    border: 0;
+    border-radius: 0.375rem;
+    background: var(--button);
+    color: var(--button-text);
+    font: inherit;
+    cursor: pointer;
+}
+
+button:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--warning);
+    outline-offset: 2px;
+}
